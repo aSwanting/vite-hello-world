@@ -1,15 +1,25 @@
 <script>
+import appHero from './components/appHero.vue'
 export default {
   data() {
     return {
       message: "It's Alive!"
     }
+  },
+  components: {
+    appHero
   }
 }
 </script>
 
 <template>
-  <div>{{ message }}</div>
+  <appHero />
+  <div class="message">{{ message }}</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.message {
+  text-align: center;
+  font-size: 36px;
+}
+</style>
